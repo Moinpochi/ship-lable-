@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Smart Label Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>📦 Smart Label Generator</h1>
+
+  <div class="card form-card">
+    <h2>Create Labels</h2>
+
+    <label class="check-row">
+      <input type="checkbox" id="useLogo" checked>
+      Include Logo
+    </label>
+
+    <div class="grid">
+      <input type="text" id="rname" placeholder="Receiver Name">
+      <input type="text" id="rphone" placeholder="Receiver Phone">
+    </div>
+
+    <textarea id="raddress" placeholder="Receiver Address"></textarea>
+
+    <div class="grid3">
+      <input type="text" id="rcity" placeholder="City">
+      <input type="text" id="rstate" placeholder="State">
+      <input type="text" id="rpin" placeholder="PIN Code">
+    </div>
+
+    <hr>
+
+    <div class="grid">
+      <input type="text" id="sname" placeholder="Sender Name">
+      <input type="text" id="sphone" placeholder="Sender Phone">
+    </div>
+
+    <textarea id="saddress" placeholder="Sender Address"></textarea>
+
+    <div class="btn-row">
+      <button onclick="generateLabels()">Generate</button>
+      <button class="secondary" onclick="printLabels()">Print / Save PDF</button>
+    </div>
+
+    <p class="note">
+      Logo ON = 2 labels per A4 • Logo OFF = 4 labels per A4
+    </p>
+  </div>
+
+  <div id="printArea" class="sheet"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
